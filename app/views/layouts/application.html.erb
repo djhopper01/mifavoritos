@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -21,10 +22,13 @@
 <div class="container">
   <div class="content">
     <ul class="nav nav-tabs">
-      <li class="active"><%= link_to "History", '#' %></li>
+      <li class="active"><%= link_to "My Favorites", '#' %></li>
       <li><%= link_to "Popular", '#' %></li>
       <li><%= link_to "Random", '#' %></li>
     </ul>
+    <div class="header-marco">
+      <%= image_tag "marco.png" %>
+    </div>
     <div class="content-container">
       <%= yield %>
     </div>

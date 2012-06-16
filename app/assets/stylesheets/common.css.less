@@ -1,5 +1,9 @@
 @import 'twitter/bootstrap/mixins';
 
+.span14 {
+	width: 1060px;
+}
+
 a:link {
 	.transition(color .2s linear);
 }
@@ -22,21 +26,40 @@ header {
 	background-color: #3A87AD;
 	color: white;
 	padding: 24px 0 64px 0;
+	position: relative;
+	.container {
+		position: relative;
+	}
 	h1 {
 		text-shadow: 0 -1px 7px #BCE8F1;
+		font-family: 'Crafty Girls', cursive;
 	}
 	.links {
 		position: relative;
 		top: 16px;
 		margin-right: 12px;
 		li {
-			
+
 		}
 		a:link {
+			background-color: #27506E;
+			color: #ccc;
+			padding: 6px 12px;
+		}
+		a:hover {
+			text-decoration: none;
 			color: white;
-			padding: 0 6px;
 		}
 	}
+}
+
+.header-marco {
+	width: 309px;
+	height: 190px;
+	position: absolute;
+	top: -130px;
+	left: 280px;
+	z-index: 0;
 }
 
 footer {
@@ -57,23 +80,16 @@ footer {
 .content {
 	position: relative;
 	margin-top: -48px;
-	overflow: hidden;
 }
 
 .content-container {
-	padding: 12px;
+	padding: 36px 0;
 	background-color: white;
 	min-height: 600px;
 }
 
 .nav-tabs {
 	background: #999;
-	-webkit-border-top-left-radius: 10px;
-	     -moz-border-top-left-radius: 10px;
-	          border-top-left-radius: 10px;
-	-webkit-border-top-right-radius: 10px;
-	     -moz-border-top-right-radius: 10px;
-	          border-top-right-radius: 10px;
 	margin-bottom: 0;
 	li {
 		a {
@@ -81,6 +97,10 @@ footer {
 			padding-bottom: 15px;
 			border: none;
 			font-size: 16px;
+			font-weight: bold;
+			color: #666;
+			position: relative;
+			z-index: 1;
 		}
 		a:hover {
 			.border-radius(0);
@@ -98,10 +118,21 @@ footer {
 }
 
 .favorite-square {
-	min-height: 300px;
-	border: 1px solid #ccc;
-	.border-radius(5px);
 	.favorite-container {
 		padding: 8px;
+		min-height: 300px;
+		.border-radius(5px);
+		background-color: white;
+		border: 1px solid #ccc;
 	}
+	.favorite-image {
+		background-image: url(/assets/twoods.jpg);
+		color: white;
+		text-shadow: 0 1px 1px #000;
+		border: 1px solid transparent;
+	}
+}
+
+.overlap-span1 {
+	margin-left: -60px;
 }
