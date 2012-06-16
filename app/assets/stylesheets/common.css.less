@@ -1,0 +1,107 @@
+@import 'twitter/bootstrap/mixins';
+
+a:link {
+	.transition(color .2s linear);
+}
+
+a:hover {
+	.transition(color .2s linear);
+}
+
+.links {
+	li {
+		display: inline;
+	}
+}
+
+body {
+	background-color: #333;
+}
+
+header {
+	background-color: #3A87AD;
+	color: white;
+	padding: 24px 0 64px 0;
+	h1 {
+		text-shadow: 0 -1px 7px #BCE8F1;
+	}
+	.links {
+		position: relative;
+		top: 16px;
+		margin-right: 12px;
+		li {
+			
+		}
+		a:link {
+			color: white;
+			padding: 0 6px;
+		}
+	}
+}
+
+footer {
+	padding: 12px 0;
+	.links {
+		a:link {
+			color: #999;
+			font-weight: bold;
+			padding: 4px;
+		}
+		a:hover {
+			text-decoration: none;
+			color: white;
+		}
+	}
+}
+
+.content {
+	position: relative;
+	margin-top: -48px;
+	overflow: hidden;
+}
+
+.content-container {
+	padding: 12px;
+	background-color: white;
+	min-height: 600px;
+}
+
+.nav-tabs {
+	background: #999;
+	-webkit-border-top-left-radius: 10px;
+	     -moz-border-top-left-radius: 10px;
+	          border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	     -moz-border-top-right-radius: 10px;
+	          border-top-right-radius: 10px;
+	margin-bottom: 0;
+	li {
+		a {
+			padding: 16px 16px;
+			padding-bottom: 15px;
+			border: none;
+			font-size: 16px;
+		}
+		a:hover {
+			.border-radius(0);
+		}
+		&.active {
+			a {
+				border: none;
+				.border-radius(0);
+			}
+			a:hover {
+				border: none;
+			}
+		}
+	}
+}
+
+.favorite-square {
+	min-height: 300px;
+	border: 1px solid #ccc;
+	.border-radius(5px);
+	.favorite-container {
+		padding: 8px;
+	}
+}

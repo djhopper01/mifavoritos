@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mifavoritos</title>
+  <title>Mi Favoritos: a place to keep your favorites</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<header>
+  <div class="container">
+    <h1 class="pull-left">Mi Favoritos</h1>
+    <ul class="unstyled links pull-right">
+      <li><%= link_to "Marco Burrito", '#' %></li>
+      <li><%= link_to "Settings", '#' %></li>
+    </ul>
+  </div>
+</header>
+
+<div class="container">
+  <div class="content">
+    <ul class="nav nav-tabs">
+      <li class="active"><%= link_to "History", '#' %></li>
+      <li><%= link_to "Popular", '#' %></li>
+      <li><%= link_to "Random", '#' %></li>
+    </ul>
+    <div class="content-container">
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <ul class="unstyled links pull-right">
+      <li><%= link_to "What do you do with my content?", '#' %></li>
+      <li><%= link_to "Support", '#' %></li>
+    </ul>
+  </div>
+</footer>
 
 </body>
 </html>
