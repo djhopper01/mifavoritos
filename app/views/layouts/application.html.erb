@@ -13,7 +13,13 @@
   <div class="container">
     <h1 class="pull-left">Mi Favoritos</h1>
     <ul class="unstyled links pull-right">
-      <li><%= link_to "Marco Burrito", '#' %></li>
+      <li>
+        <% if user_signed_in? %>
+          <%= link_to current_user.name, '#' %>
+        <% else %>
+          <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+        <% end %>
+      </li>
       <li><%= link_to "Settings", '#' %></li>
     </ul>
   </div>

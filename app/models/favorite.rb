@@ -1,3 +1,5 @@
 class Favorite < ActiveRecord::Base
-  # attr_accessible :title, :body
+  acts_as_taggable
+  
+  attr_accessible :title, :author, :text
 end
