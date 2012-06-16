@@ -21,6 +21,7 @@ end
 
 group :development, :test do
   gem 'foreman'
+  gem 'rspec-rails', "~> 2.0"
 end
 
 gem 'jquery-rails'
