@@ -4,6 +4,11 @@ class Favorite < ActiveRecord::Base
   has_many :media
   acts_as_taggable
   
+  searchable do
+    text :title, :author, :text
+    integer :user_id
+  end
+  
   attr_accessible :title, :author, :text
   
   validates :user_id, :presence => true

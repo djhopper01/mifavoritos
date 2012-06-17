@@ -14,6 +14,7 @@ gem 'omniauth-facebook'
 gem 'rails_config'
 
 gem 'diffbot'
+gem 'sunspot_rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,6 +30,7 @@ end
 group :development, :test do
   gem 'foreman'
   gem 'rspec-rails', "~> 2.0"
+  gem 'sunspot_solr'
 end
 
 gem 'jquery-rails'
