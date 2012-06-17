@@ -11,7 +11,7 @@ bundle exec rake db:migrate
 
 ## Startup
 
-### Running all processes (foreman: starts unicorn)
+### Running all processes (foreman: starts unicorn, solr)
 ```
 foreman start
 ```
