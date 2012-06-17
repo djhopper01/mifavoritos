@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120616220432) do
+ActiveRecord::Schema.define(:version => 20120617142624) do
 
   create_table "favorites", :force => true do |t|
     t.string   "title"
@@ -20,6 +20,22 @@ ActiveRecord::Schema.define(:version => 20120616220432) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "links", :force => true do |t|
+    t.string   "href"
+    t.integer  "favorite_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "media", :force => true do |t|
+    t.string   "href"
+    t.string   "media_type"
+    t.boolean  "primary"
+    t.integer  "favorite_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "taggings", :force => true do |t|
