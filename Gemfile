@@ -10,6 +10,7 @@ gem 'acts-as-taggable-on', '~> 2.3.1'
 
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'cancan'
 
 gem 'rails_config'
 
