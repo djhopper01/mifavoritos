@@ -3,5 +3,5 @@ class Link < ActiveRecord::Base
   
   attr_accessible :href
   
-  validates :href, :favorite_id, :presence => true
+  validates :href, :presence => true
 end

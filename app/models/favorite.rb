@@ -9,9 +9,17 @@ class Favorite < ActiveRecord::Base
     integer :user_id
   end
   
-  attr_accessible :title, :author, :text
+  attr_accessor :href
   
-  validates :user_id, :presence => true
-  validates_associated :link
-  validates_associated :media
+  attr_accessible :title, :author, :text, :href
+  
+  validates :user_id, :link, :presence => true
+  
+  before_validation :create_link
+  
+  private
+  
+  def create_link
+    self.build_link :href => self.href
+  end
 end
