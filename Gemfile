@@ -16,6 +16,7 @@ gem 'rails_config'
 
 gem 'diffbot'
 gem 'sunspot_rails'
+gem 'active_link_to'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -28,13 +28,12 @@
 <div class="container">
   <div class="content">
     <ul class="nav nav-tabs">
-      <li class="active"><%= link_to "My Favorites", '#' %></li>
-      <li><%= link_to "Popular", '#' %></li>
-      <li><%= link_to "Random", '#' %></li>
+      <% if user_signed_in? %>
+      <li><%= active_link_to "My Favorites", my_favorites_path %></li>
+      <% end %>
+      <li><%= active_link_to "Popular", popular_favorites_path %></li>
+      <li><%= active_link_to "Random", random_favorites_path %></li>
     </ul>
-    <div class="header-marco">
-      <%= image_tag "marco.png" %>
-    </div>
     <div class="content-container">
       <%= yield %>
     </div>
