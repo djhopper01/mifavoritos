@@ -33,6 +33,11 @@
       <% end %>
       <li><%= active_link_to "Popular", popular_favorites_path %></li>
       <li><%= active_link_to "Random", random_favorites_path %></li>
+      <li class="pull-right search-nav">
+        <form class="form-search">
+          <input type="text" class="input-medium search-query span4" placeholder="Search your favorites">
+        </form>
+      </li>
     </ul>
     <div class="content-container">
       <%= yield %>
