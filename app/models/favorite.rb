@@ -17,6 +17,10 @@ class Favorite < ActiveRecord::Base
   
   before_validation :create_link
   
+  def to_s
+    self.title
+  end
+  
   private
   
   def create_link

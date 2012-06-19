@@ -4,8 +4,9 @@ Mifavoritos::Application.routes.draw do
   
   resources :favorites do
     collection do
-      get 'popular', :as => :popular
-      get 'random', :as => :random
+      get 'search'
+      get 'popular'
+      get 'random'
       get 'my' => "favorites#index", :as => :my
     end
   end

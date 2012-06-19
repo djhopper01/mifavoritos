@@ -20,6 +20,13 @@ class FavoritesController < ApplicationController
   
   # List all favorites by search query (limit: 50?)
   def search
+    search = Favorite.search do
+      fulltext params[:query]
+    end
+    
+    @favorites = search.results
+    
+    respond_with @favorites
   end
   
   def new

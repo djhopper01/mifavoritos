@@ -34,9 +34,9 @@
       <li><%= active_link_to "Popular", popular_favorites_path %></li>
       <li><%= active_link_to "Random", random_favorites_path %></li>
       <li class="pull-right search-nav">
-        <form class="form-search">
-          <input type="text" class="input-medium search-query span4" placeholder="Search your favorites">
-        </form>
+        <%= form_tag search_favorites_path, :method => :get, :class => "form-search" do %>
+          <%= text_field_tag :query, nil, :class => "input-medium search-query span4", :placeholder => "Search your favorites" %>
+        <% end %>
       </li>
     </ul>
     <div class="content-container">
